@@ -5,11 +5,11 @@ arr=[[1,2,3],[4,5,6],[7,8,9]]#2D array #shape->(2,3)
 x=np.array(arr) # or x=np.array(arr,dtype='d') to change the data type
 print(x)
 
-#ndim attribute
+#ndim attribute->to find the dimension(1D or 2D)
 
 print(x.ndim)# or dimension=np.ndim(x)  print(dimension)
 
-#shape attribute
+#shape attribute->(array,element)tells the size od the arrau in each dimension
 
 print(x.shape)
 
@@ -56,7 +56,7 @@ while i<3:
     print(x[i])
     i+=1
 
-#linspace function->numbers ke beech equally spaced values generate karta hai
+#linspace function->numbers ke beech equally spaced values generate karta hai(ex: [1. 2. 3. 4. 5.]) and we give it total no. we need 
 
 print(np.linspace(1,10,5))
 
@@ -72,11 +72,10 @@ b[0,1]=30
 print("copied one->\n",b)
 print("original one->\n",x,"\n")
 
-#broadcasting
+#broadcasting->the process of performing operations on arrays of different shapes by automatically expanding the smaller copy.
 
 y=np.array([[1,2,3],[2,5,6]])
 print(y.shape) #shape->(2,3)
-
 z=np.array([[1,0,0],[2,0,1]])
-print(z.shape)
-print(y+z)
+print(z.shape)#shape->(2,3)
+print(y+z) #[[2 2 3] [4 5 7]]
